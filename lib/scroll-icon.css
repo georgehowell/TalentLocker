@@ -1,0 +1,111 @@
+/*    S C R O L L   */
+.scroll {
+  position: fixed;
+  width: 60px;
+  bottom: 30px;
+  left: calc(50% - 30px);
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-weight: 100;
+  font-size: 16px;
+  opacity: 0.3;
+  animation: pulse 8s infinite ease-in-out;
+  z-index: 8;
+}
+.scroll__icon--3 {
+  border: solid 2px #fff;
+  border-radius: 20px;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  width: 30px;
+}
+.scroll__icon--3::before {
+  animation: mouseScroll 2s infinite;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  transform: translateY(5px);
+  width: 6px;
+}
+@keyframes mouseScroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+}
+@keyframes pulse {
+  0%,
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/*   T O P   */
+a.backToTop {
+  z-index: 9;
+  position: relative;
+  bottom: 15px;
+  left: calc(50% - 35px);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  border-radius: 20px;
+  padding: 40px 7px 9px 7px;
+  background: #000 url("../assets/img/Back-to-Top.png") center 8px no-repeat;
+  background-size: 40px 40px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-weight: 100;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+a.backToTop span {
+  letter-spacing: 1px;
+}
+a.backToTop:hover {
+  background-color: var(--primary);
+  background-image: url("../assets/img/Back-to-Top_.png");
+}
+
+
+@media only screen and (max-width: 1080px) {
+  a.backToTop {
+    display: none;
+  }
+  .scroll {
+    color: #000;
+  }
+
+}
+
+/*   M O B I L E:   Portrait */
+@media only screen and (min-device-width: 300px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .scroll {
+    animation-duration: 16s;
+  }
+}

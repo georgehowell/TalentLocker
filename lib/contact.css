@@ -1,0 +1,231 @@
+html:root:root:root:root:root,
+:root:root:root:root:root body {
+  overflow: hidden !important;
+}
+iframe#form {
+  width: 100%;
+  position: relative;
+  height: 515px;
+  top: -40px;
+  border: 0;
+  background-color: transparent;
+  clip-path: inset(45px 50px 70px 35px);
+}
+embed {
+  position: absolute;
+  top: 70px;
+  width: 50%;
+  height: 365px;
+  left: 5%;
+  background-color: transparent;
+}
+embed, iframe {overflow: hidden;}
+embed:focus {
+   outline: none;
+}
+
+.form-container {
+  width: 660px;
+  height: 415px;
+  overflow: hidden;
+  margin: 0 auto 0 8.5%;
+}
+
+h4.center {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: regular;  font-weight: 400;
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.5;
+  color: var(--primary);
+  min-width: 530px;
+  margin: 100px auto 40px auto;
+}
+h4 a {
+    letter-spacing: 1px;
+}
+
+.dot-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent url('../assets/img/dot-screen-3.png');
+  background-size: 4px;
+}
+
+
+/* ///// inputs /////*/
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #fff;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: .5rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+.styled-input label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: "normal";
+  font-weight: regular;
+  font-weight: 400;
+  color: #fff;
+  padding: 1.3rem 30px .5rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: regular;  font-weight: "normal";
+  font-weight: 400;
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+textarea {
+  width: 100%;
+  min-height: 5em;
+  border-radius: 4px;
+}
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 5px auto 5px auto;
+}
+input[type="checkbox"] + label {
+  color: #ccc;
+  font-style: italic;
+}
+input[type="checkbox"]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+
+/*  SUBMIT BUTTON */
+.button-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+}
+
+.submit-button {
+  background: var(--primary) url('../assets/img/Send.png') no-repeat;
+  background-size: 40px;
+  background-position: 90% 5px;
+  border: 0;
+  border-radius: 15px;
+  color: #000;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;  font-weight: "bold";
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  height: 50px;
+  padding: 5px 45px 5px 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  box-shadow: 0 6px 0 var(--primary-dark), 0 5px 15px -4px #000;
+
+  transform:  opacity 200ms ease-in-out, 
+              margin-top 200ms ease-in-out, 
+              opacity 200ms ease-in-out;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  opacity: 0.9;
+  outline: 0;
+}
+.submit-button:active {
+  box-shadow: none;
+  margin-top: 16px;
+}
+
+/*   M O B I L E:   Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .container {margin-top: 80px;}
+  .container .row.mt-8 {margin-top: 170px;}
+.sm_hide {display: none;}
+form {display: none;}
+}
+
+@media only screen and (min-width: 1200px) {
+  h4.center {
+    margin-right: 33.33336%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  h4.center {
+    margin-right: 40%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  h4.center {
+    margin-right: 45%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  h4.center {
+    margin-right: 50%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .form-container {
+    margin: 0 auto;
+  }
+  h4.center {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  h4.center {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 796px) {
+
+}

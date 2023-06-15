@@ -1,0 +1,7 @@
+.logo-text h1 {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    font-size: 40px;
+    letter-spacing: 20px;
+    margin: 0 auto 0 7%;
+  }

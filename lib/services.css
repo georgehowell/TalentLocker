@@ -1,0 +1,243 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+ul li {
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.slide {
+  position: relative;
+  padding: 20vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(0.25px) scale(0.75) translateX(-94%) translateY(-100%)
+    rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+img:last-of-type {
+  transform: translateZ(0.4px) scale(0.6) translateX(-104%) translateY(-40%)
+    rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  width: 35%;
+  padding: 7px 30px;
+  border-radius: 5px;
+  background: rgba(240, 230, 220, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n + 1) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide,
+.slide:before {
+  background: 50% 50% / cover;
+}
+
+.header {
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+.header h2 {
+  text-align: center;
+}
+
+#title {
+  background-image: url("../assets/img/bg-img/who_xl.jpg");
+  z-index: 2;
+  min-height: 100vh;
+}
+
+#title h1 {
+  transform: translateZ(0.25px) scale(0.75);
+  transform-origin: 50% 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+#title .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#slide1:before {
+  background-image: url("../assets/img/bg-img/keyboard_xl.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("../assets/img/bg-img/cloud_xl.jpg");
+  z-index: 2;
+}
+
+#slide2 .title,
+#title .title {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+#slide3:before {
+  background-image: url("../assets/img/bg-img/projects_xl.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #222;
+}
+
+.bg-gradient {
+  background-color: #000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 45%,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@media only screen and (max-width: 2400px) {
+  #title {
+    background-image: url("../assets/img/bg-img/who_lg.jpg");
+  }
+  #slide1:before {
+    background-image: url("../assets/img/bg-img/keyboard_lg.jpg");
+  }
+  #slide2 {
+    background-image: url("../assets/img/bg-img/cloud_lg.jpg");
+  }
+  #slide3:before {
+    background-image: url("../assets/img/bg-img/projects_lg.jpg");
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .w-50 {
+    width: 70%;
+  }
+
+  #title {
+    background-image: url("../assets/img/bg-img/who_med.jpg");
+  }
+  #slide1:before {
+    background-image: url("../assets/img/bg-img/keyboard_med.jpg");
+  }
+  #slide2 {
+    background-image: url("../assets/img/bg-img/cloud_med.jpg");
+  }
+  #slide3:before {
+    background-image: url("../assets/img/bg-img/projects_med.jpg");
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .title {
+    width: 90%;
+  }
+  .sm_hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #title {
+    background-image: url("../assets/img/bg-img/who_sm.jpg");
+  }
+  #slide1:before {
+    background-image: url("../assets/img/bg-img/keyboard_sm.jpg");
+  }
+  #slide2 {
+    background-image: url("../assets/img/bg-img/cloud_sm.jpg");
+  }
+  #slide3:before {
+    background-image: url("../assets/img/bg-img/projects_sm.jpg");
+  }
+}
+
+/*   M O B I L E:   Portrait and Landscape */
+@media only screen and (min-device-width: 300px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  :root {
+    font-size: 14px;
+  }
+  .slide {
+    padding: 20vh 2.5% 20vh 0;
+  }
+  .scroll {
+    display: none;
+  }
+
+  #title {
+    padding-top: 12vh;
+  }
+  #title h1 {
+    font-size: 2.5rem;
+    padding: 0 2% 0 1%;
+  }
+  .title h1 {text-align: left;}
+  .mobile-ph-email {
+    font-size: 1.5rem;
+  }
+  #slide2 {
+    bottom: -150px;
+  }
+  #slide1:before {
+    background-image: none;
+    background-color: rgba(255,255,255,0.5);
+    height: 70%;
+  }
+
+}
