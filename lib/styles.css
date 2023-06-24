@@ -289,6 +289,13 @@ nav a.active:hover {
 .show-mobile {
   display: none;
 }
+.credit {
+  color: #aaa;
+  font: 1em sans-serif;
+  float: right;
+  padding-right: 1rem;
+}
+.credit b {font-size: 1.25rem;}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * *  M O B I L E   N A V  * * * * * * * * * * * */
